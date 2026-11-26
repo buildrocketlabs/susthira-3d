@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Susthira, for Dr. M. S. Rao</title>
+<meta name="description" content="Your new bottles, live in 3D. Turn them with your finger.">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<meta name="theme-color" content="#12372A">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Susthira Bio Organics">
+<meta property="og:title" content="Susthira, for Dr. M. S. Rao">
+<meta property="og:description" content="Your new bottles, live in 3D. Turn them with your finger.">
+<meta property="og:image" content="%SITE_URL%/og.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Three Susthira bottles: Banana Special, PSB Liquid and Jeevamrutha Culture">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preload" href="/fonts/fraunces-latin-500-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/noto-sans-kannada-kannada-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/brand/mark_white.webp" as="image" type="image/webp">
+<style>
+/* Critical styles for the opening screen. It paints before any script loads. */
+@font-face{font-family:Fraunces;src:url(/fonts/fraunces-latin-500-normal.woff2) format("woff2");font-weight:500;font-style:normal;font-display:swap}
+@font-face{font-family:"Noto Sans Kannada";src:url(/fonts/noto-sans-kannada-kannada-600-normal.woff2) format("woff2");font-weight:600;font-style:normal;font-display:swap;unicode-range:U+0964-0965,U+0C80-0CFF,U+200C-200D,U+25CC}
+html,body{margin:0;height:100%;background:#0B271D;overflow:hidden;overscroll-behavior:none}
+#intro{position:fixed;inset:0;z-index:50;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0;
+  background:radial-gradient(120% 80% at 50% 42%,#15402F 0%,#0B271D 62%,#081D15 100%);color:#F4EFE3;text-align:center;padding:24px;
+  transition:opacity 1.1s cubic-bezier(.4,0,.2,1),visibility 0s linear 1.1s;-webkit-tap-highlight-color:transparent;cursor:pointer}
+#intro.out{opacity:0;visibility:hidden;pointer-events:none}
+#intro img{width:76px;height:auto;opacity:.01;animation:rise 1.2s cubic-bezier(.2,.7,.2,1) .15s forwards}
+#intro h1{font:500 clamp(30px,8.4vw,44px)/1.15 Fraunces,Georgia,serif;margin:30px 0 0;letter-spacing:-.01em;opacity:.01;animation:rise 1.2s cubic-bezier(.2,.7,.2,1) .95s forwards}
+#intro p{font:600 clamp(18px,5vw,23px)/1.5 "Noto Sans Kannada",sans-serif;margin:12px 0 0;color:#C9A04A;opacity:.01;animation:rise 1.2s cubic-bezier(.2,.7,.2,1) 1.45s forwards}
+#intro .bar{width:132px;height:2px;border-radius:2px;background:rgba(244,239,227,.14);margin-top:38px;overflow:hidden;opacity:0;animation:show .8s ease 3.4s forwards}
+#intro .bar i{display:block;height:100%;width:100%;background:#C9A04A;transform-origin:0 50%;transform:scaleX(.04);transition:transform .5s ease}
+#intro small{position:absolute;left:0;right:0;bottom:max(26px,env(safe-area-inset-bottom));font:400 14px/1.4 system-ui,sans-serif;color:rgba(244,239,227,.5);opacity:0;animation:show 1s ease 2.6s forwards}
+@keyframes rise{from{opacity:.01;transform:translateY(10px)}to{opacity:1;transform:none}}
+@keyframes show{to{opacity:1}}
+@media(prefers-reduced-motion:reduce){#intro img,#intro h1,#intro p{animation-duration:.01s;animation-delay:0s}}
+</style>
+</head>
+<body>
+<div id="intro" role="img" aria-label="For Dr. M. S. Rao">
+  <img src="/brand/mark_white.webp" width="447" height="556" alt="">
+  <h1>For Dr. M. S. Rao</h1>
+  <p lang="kn">ಡಾ. ಎಂ. ಎಸ್. ರಾವ್ ಅವರಿಗೆ</p>
+  <div class="bar" aria-hidden="true"><i id="intro-bar"></i></div>
+  <small id="intro-skip">Tap to begin</small>
+</div>
+<div id="root"></div>
+<noscript><p style="color:#F4EFE3;font:16px system-ui;padding:24px;position:relative;z-index:60">Please turn on JavaScript to see the Susthira bottles in 3D.</p></noscript>
+<script type="module" src="/src/main.tsx"></script>
+</body>
+</html>
