@@ -1,0 +1,43 @@
+{
+  "name": "susthira-live-3d",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "assets:textures": "node scripts/build-textures.mjs",
+    "assets:maps": "node scripts/gen-maps.mjs",
+    "assets:glb": "tsx scripts/build-glb.ts"
+  },
+  "dependencies": {
+    "@google/model-viewer": "^4.4.0",
+    "@react-three/drei": "^10.7.9",
+    "@react-three/fiber": "^9.8.2",
+    "@react-three/postprocessing": "^3.2.2",
+    "@vercel/analytics": "^2.0.1",
+    "detect-gpu": "^5.0.70",
+    "n8ao": "^2.1.0",
+    "postprocessing": "^6.39.6",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "three": "^0.183.2",
+    "zustand": "^5.1.0"
+  },
+  "devDependencies": {
+    "@gltf-transform/core": "^4.5.1",
+    "@types/node": "^22.20.7",
+    "@types/react": "^19.3.3",
+    "@types/react-dom": "^19.3.0",
+    "@types/three": "^0.183.1",
+    "@vitejs/plugin-react": "^6.3.0",
+    "sharp": "^0.35.5",
+    "tsx": "^4.23.15",
+    "typescript": "^5.9.3",
+    "vite": "^8.3.8"
+  }
+}
